@@ -1,3 +1,7 @@
+---
+lang: ja
+---
+
 # 既存のプロジェクトに参加してみよう (GitHub Flow)
 
 実際に GitHub Flow を用いて、既存のプロジェクトにファイルを追加してみましょう。
@@ -80,10 +84,12 @@ git push origin ht17a000
 画面上部に「最近プッシュされたブランチ」が表示されるので、
 右側の `[Compare & pull request]` を選択して `プルリクエスト(pull request)` を作成しましょう。
 
-### [Compare & pull request] が出ない場合
+::: tip [Compare & pull request] が出ない場合
 
 - ファイル一覧の上にある [New pull request] を選択
-- Compare changes の下側の `[base: master] ← [compare: master]` の compare 側をプッシュしたブランチに変更
+- `[base repository: hoge][base: master] ← [head repository: user/hoge][compare: master]` の `[compare: master]` をプッシュしたブランチに変更
+
+:::
 
 ---
 
