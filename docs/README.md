@@ -1,5 +1,4 @@
 ---
-title: GitHub を用いた共同開発
 lang: ja
 ---
 
