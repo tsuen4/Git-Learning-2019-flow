@@ -18,6 +18,8 @@ npm run dev
 
 ## build
 
+`docs/.vuepress/dist/` にサイトが生成される。
+
 ```bash
 npm run build
 ```
