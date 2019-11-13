@@ -1,0 +1,3 @@
+FROM node:10
+ENV HOME=/hosting
+WORKDIR $HOME
