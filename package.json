@@ -3,7 +3,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "name": "aa",
+  "name": "oecu-git-learning-github-flow",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
