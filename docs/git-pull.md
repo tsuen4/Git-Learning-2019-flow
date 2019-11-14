@@ -22,3 +22,39 @@ git merge origin/master
 ```
 
 ## コンフリクト
+
+今回のワークでは恐らくなりませんが、Git には`コンフリクト(conflict)`という状態があります。
+
+別々のブランチで重複する部分が変更されている状態でマージすると、
+変更同士が衝突(コンフリクト)してしまいます。
+コンフリクトした時のの出力は以下のような物になります。
+
+```bash
+CONFLICT (content): Merge conflict in ファイル名
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+
+
+```bash
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+```
+
+
+```bash
+# conflict test
+
+<<<<<<< HEAD
+- master ブランチでの変更
+
+=======
+- hoge ブランチでの変更
+>>>>>>> hoge
+
+```
