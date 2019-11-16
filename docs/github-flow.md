@@ -42,7 +42,7 @@ git clone コピーしたURL
 
 ```bash
 git remote add upstream 元のリポジトリのURL
-git remote -v # リモート先の確認 origin と upstream が表示されてたら OK!
+git remote -v # リモート先の確認 origin と upstream が表示されていたら OK!
 ```
 
 ::: tip 間違えてしまった場合
@@ -68,6 +68,10 @@ git checkout ht17a000 # 作成したブランチに切り替える
 
 ブランチを切り替えたら、 <https://github.com/hoge/hoge> の README.md に書いてある方法で作業を始めましょう。
 
+::: tip ブランチの作成 + 切替のショートカット
+checkout コマンドに -b オプションを付けた `git checkout -b ブランチ名` で、作成と切り替えを同時に行うことができます。
+:::
+
 ## ブランチをプッシュ
 
 作成・編集したファイルをコミットして、定期的にリモートリポジトリにブランチをプッシュしておきましょう。
@@ -76,6 +80,10 @@ git checkout ht17a000 # 作成したブランチに切り替える
 # origin というリモート先に学籍番号の名前のブランチを送信
 git push origin ht17a000
 ```
+
+::: tip ブランチ名を入力するのが面倒な場合
+`git push origin HEAD` とすることで、現在のブランチを送信できます。
+:::
 
 ## プルリクエストの作成
 
