@@ -23,12 +23,12 @@ GitHub 上にあるリポジトリをローカルにダウンロードするに�
 
 <!-- フォークとクローンの図を入れる -->
 
-今回使用するリモートリポジトリは <https://github.com/hoge/hoge> です。
+今回使用するリモートリポジトリは <https://github.com/oecu-class-advanced-cpp2/To-do-List> です。
 リンク先のリポジトリにアクセスして、右上の fork ボタンを押してフォークしましょう。
-フォークが成功したら、 GitHub の自分のユーザーページにある、hogehoge というリポジトリにアクセスします。
-そして、画面の右中央の `[Clone or download]` をクリックしてリポジトリの URL をコピーし、
+フォークが成功したら、 GitHub の自分のユーザーページにある、**To-do-List** というリポジトリにアクセスします。
+そして、画面の右中央にある `[Clone or download]` をクリックしてリポジトリの URL をコピーし、
 `git clone <URL>` コマンドでローカルにクローンしましょう。
-クローンしてきたたリポジトリには、自動的に `origin` という名前のリモート先が設定されています。
+クローンしてきたたリポジトリには、`origin` という名前でリモート先が自動で設定されます。
 
 ```bash
 git clone コピーしたURL
@@ -60,13 +60,13 @@ git remote -v # リモート先の確認 origin と upstream が表示されて�
 その中に入り、ブランチを切りましょう。今回は学籍番号でつけてみましょう。
 
 ```bash
-cd <リポジトリ名>
+cd To-do-List # クローンしてきたリポジトリに入る
 git branch ht17a000 # 学籍番号の名前でブランチを作成
 git checkout ht17a000 # 作成したブランチに切り替える
 # 'git status' で現在のブランチの確認
 ```
 
-ブランチを切り替えたら、 <https://github.com/hoge/hoge> の README.md に書いてある方法で作業を始めましょう。
+ブランチを切り替えたら、 <https://github.com/oecu-class-advanced-cpp2/To-do-List> の [README.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/README.md) と [document.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/document.md) に書いてある方法で作業を始めましょう。
 
 ::: tip ブランチの作成 + 切替のショートカット
 checkout コマンドに -b オプションを付けた `git checkout -b ブランチ名` で、作成と切り替えを同時に行うことができます。
@@ -82,7 +82,7 @@ git push origin ht17a000
 ```
 
 ::: tip ブランチ名を入力するのが面倒な場合
-`git push origin HEAD` とすることで、現在のブランチを送信できます。
+`git push origin HEAD` とすることで、現在いるブランチをプッシュできます。
 :::
 
 ## プルリクエストの作成
@@ -108,5 +108,3 @@ git push origin ht17a000
 入力したら `[Create pull request]` を選択して完了です。
 元リポジトリのオーナーにマージされたら、
 あなたの変更が元のプロジェクトに反映されます！
-
-<!-- プルリク受ける側も書こう -->
