@@ -1,3 +1,3 @@
 FROM node:10
-ENV HOME=/hosting
+ENV HOME=/flow
 WORKDIR $HOME
