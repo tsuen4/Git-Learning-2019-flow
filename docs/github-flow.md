@@ -23,16 +23,16 @@ GitHub 上にあるリポジトリをローカルにダウンロードするに�
 
 <img :src="$withBase('/assets/fork_clone.png')" alt="GitHub Flow">
 
-
 今回使用するリモートリポジトリは <https://github.com/oecu-class-advanced-cpp2/To-do-List> です。
 リンク先のリポジトリにアクセスして、右上の fork ボタンを押してフォークしましょう。
-フォークが成功したら、 GitHub の自分のユーザーページにある、**To-do-List** というリポジトリにアクセスします。
+フォークが成功したら、 GitHub の**自分のユーザーページ**にある、**To-do-List** のリポジトリにアクセスします。
 そして、画面の右中央にある `[Clone or download]` をクリックしてリポジトリの URL をコピーし、
 `git clone <URL>` コマンドでローカルにクローンしましょう。
 クローンしてきたたリポジトリには、`origin` という名前でリモート先が自動で設定されます。
 
 ```bash
 git clone コピーしたURL
+cd To-do-List # クローンしてきたリポジトリのディレクトリに入る
 ```
 
 ## 元のリポジトリと接続
@@ -55,13 +55,21 @@ git remote -v # リモート先の確認 origin と upstream が表示されて�
 
 :::
 
+HTTPS の URL を使用している場合は `git remote -v` コマンドで、以下のような出力になります。
+
+```git
+origin  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (fetch)
+origin  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (push)
+upstream  https://github.com/自分のアカウント/To-do-List.git (fetch)
+upstream  https://github.com/自分のアカウント/To-do-List.git (push)
+```
+
 ## ブランチを作って作業
 
 クローンに成功したら、カレントディレクトリにリポジトリ名のディレクトリが作成されます。
 その中に入り、ブランチを切りましょう。今回は学籍番号でつけてみましょう。
 
 ```bash
-cd To-do-List # クローンしてきたリポジトリに入る
 git branch ht17a000 # 学籍番号の名前でブランチを作成
 git checkout ht17a000 # 作成したブランチに切り替える
 # 'git status' で現在のブランチの確認
