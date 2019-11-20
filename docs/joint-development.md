@@ -41,5 +41,3 @@ GitHub では、`プルリクエスト(Pull request)` の機能を使うこと�
 <!-- 図を入れたい -->
 
 上記のプルリクエスト機能を活かした開発フローを `GitHub Flow` とも呼びます。
-
-<img :src="$withBase('/assets/GitHub-Flow.png')" alt="GitHub Flow">

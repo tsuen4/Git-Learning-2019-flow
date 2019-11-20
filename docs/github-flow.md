@@ -106,6 +106,8 @@ git push origin ht99a999
 
 ## プルリクエストの作成
 
+<img :src="$withBase('/assets/GitHub-Flow.png')" alt="GitHub Flow">
+
 プルリクエストは、助言が欲しい時や、ブランチをマージしても良いと思ったときに立てます。
 立てるにはブランチをプッシュした後に GitHub で、
 
