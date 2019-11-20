@@ -47,9 +47,10 @@ cd To-do-List # クローンしてきたリポジトリのディレクトリに�
 
 ## 元のリポジトリと接続
 
-クローンした後の origin には、フォークされたリポジトリに対して設定されています。
-元のリポジトリの変更も pull (取得)するために、別のリモート先を追加しましょう。
-元のリポジトリに対しては `upstream` という名前をつけることが多いです。
+クローンしてきたたリポジトリには、クローン元に対して自動で `origin` という名前で設定されます。
+このリポジトリの `origin` には、フォークしたリポジトリに対して設定されているので、
+フォーク元のリポジトリの変更も pull (取得)するために、別のリモート先を追加しましょう。
+フォーク元のリポジトリに対しては `upstream` という名前をつけることが多いです。
 
 ```bash
 git remote add upstream 元のリポジトリのURL
@@ -70,18 +71,17 @@ HTTPS の URL を使用している場合は `git remote -v` コマンドで、�
 ```git
 origin  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (fetch)
 origin  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (push)
-upstream  https://github.com/自分のアカウント/To-do-List.git (fetch)
-upstream  https://github.com/自分のアカウント/To-do-List.git (push)
+upstream  https://github.com/自分のアカウント名/To-do-List.git (fetch)
+upstream  https://github.com/自分のアカウント名/To-do-List.git (push)
 ```
 
 ## ブランチを作って作業
 
-クローンに成功したら、カレントディレクトリにリポジトリ名のディレクトリが作成されます。
-その中に入り、ブランチを切りましょう。今回は学籍番号でつけてみましょう。
+upstream の設定ができたらブランチを作成します。今回は学籍番号でつけてみましょう。
 
 ```bash
-git branch ht17a000 # 学籍番号の名前でブランチを作成
-git checkout ht17a000 # 作成したブランチに切り替える
+git branch ht99a999 # 学籍番号の名前でブランチを作成
+git checkout ht99a999 # 作成したブランチに切り替える
 # 'git status' で現在のブランチの確認
 ```
 
@@ -93,15 +93,15 @@ checkout コマンドに -b オプションを付けた `git checkout -b ブラ�
 
 ## ブランチをプッシュ
 
-作成・編集したファイルをコミットして、定期的にリモートリポジトリにブランチをプッシュしておきましょう。
+**作成・編集したファイルをコミット**して、定期的にリモートリポジトリにブランチをプッシュしておきましょう。
 
 ```bash
 # origin というリモート先に学籍番号の名前のブランチを送信
-git push origin ht17a000
+git push origin ht99a999
 ```
 
 ::: tip ブランチ名を入力するのが面倒な場合
-`git push origin HEAD` とすることで、現在いるブランチをプッシュできます。
+`git push origin HEAD` とすることで、**現在いるブランチ**をプッシュできます。
 :::
 
 ## プルリクエストの作成
