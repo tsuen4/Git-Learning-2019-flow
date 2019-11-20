@@ -11,7 +11,7 @@ module.exports = {
   },
   themeConfig: {
     sidebar: [
-      '/',
+      '/joint-development',
       '/github-flow',
       '/git-pull',
     ],
