@@ -4,15 +4,17 @@ lang: ja
 
 # GitHub Flow を用いて既存のプロジェクトに参加してみよう
 
-実際に GitHub Flow を用いて、既存のプロジェクトに変更を加えてみましょう。
+実際に GitHub Flow を用いて、既存のプロジェクトに変更を加えてみましょう。この演習は「フォークとプルモデル」をベースに構成されています。最終的な全体像は以下のようになります。
+
+<img :src="$withBase('/assets/overall.png')" alt="overall">
 
 今回の作業は
 
-- 既存のリポジトリのフォーク(fork)してクローン(clone)
-- 元のリポジトリと接続 (upstream というリモート先)
+- 既存のリポジトリのフォークしてクローン
+- 元のリポジトリと接続
 - 編集用にブランチを作って作業
-- ブランチをプッシュ(push)
-- プルリクエスト(Pull Request)の作成
+- ブランチをプッシュ
+- プルリクエストの作成
 
 の順に行われます。
 
@@ -22,7 +24,7 @@ GitHub 上にあるリポジトリをローカルにダウンロードするに�
 しかし、他人のリポジトリに**参加する前提**でダウンロードするには、事前に `フォーク(fork)` する必要があります。
 フォークすると、自分のアカウント上にリポジトリのコピーが生成され、それをクローンすることで貢献できる状態になります。
 
-<img :src="$withBase('/assets/fork_clone.png')" alt="GitHub Flow">
+<img :src="$withBase('/assets/fork_clone.png')" alt="fork and clone">
 
 今回使用するリモートリポジトリは <https://github.com/oecu-class-advanced-cpp2/To-do-List> です。
 リンク先のリポジトリにアクセスして、
@@ -48,10 +50,13 @@ cd To-do-List # クローンしてきたリポジトリのディレクトリに�
 
 ## 元のリポジトリと接続
 
-クローンしてきたたリポジトリには、クローン元に対して自動で `origin` という名前で設定されます。
-このリポジトリの `origin` には、フォークしたリポジトリに対して設定されているので、
-フォーク元のリポジトリの変更も pull (取得)するために、別のリモート先を追加しましょう。
+クローンしてきたリポジトリには、クローン元に対して自動で `origin` という名前で設定されます。
+このリポジトリの `origin` には、フォークしたリポジトリに対して設定されています。
+
+フォーク元が更新された際、フォーク元から直接変更を取得するには、リモート先を追加することで解決できます。クローンした直後に追加しておくと良いでしょう。
 フォーク元のリポジトリに対しては `upstream` という名前をつけることが多いです。
+
+<img :src="$withBase('/assets/upstream.png')" alt="upstream">
 
 ```bash
 git remote add upstream 元のリポジトリのURL
@@ -76,7 +81,7 @@ upstream  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (fetch)
 upstream  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (push)
 ```
 
-## ブランチを作って作業
+## ブランチ作成
 
 upstream の設定ができたらブランチを作成します。今回は学籍番号でつけてみましょう。
 
@@ -86,11 +91,18 @@ git checkout ht99a999 # 作成したブランチに切り替える
 # 'git status' で現在のブランチの確認
 ```
 
-ブランチを切り替えたら、 <https://github.com/oecu-class-advanced-cpp2/To-do-List> の [README.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/README.md) と [document.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/document.md) に書いてある方法で作業を始めましょう。
-
 ::: tip ブランチの作成 + 切替のショートカット
 checkout コマンドに -b オプションを付けた `git checkout -b ブランチ名` で、作成と切り替えを同時に行うことができます。
 :::
+
+## ワーク
+
+学籍番号のブランチに切り替えたら、リポジトリ <https://github.com/oecu-class-advanced-cpp2/To-do-List> の
+
+- [README.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/README.md)
+- [document.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/document.md)
+
+に書いてある方法で作業を始めましょう。
 
 ## ブランチをプッシュ
 
@@ -107,7 +119,7 @@ git push origin ht99a999
 
 ## プルリクエストの作成
 
-<img :src="$withBase('/assets/GitHub-Flow.png')" alt="GitHub Flow">
+<img :src="$withBase('/assets/pull_request.png')" alt="Pull reques">
 
 プルリクエストは、助言が欲しい時や、ブランチをマージしても良いと思ったときに作成します。
 作成するには、
@@ -127,6 +139,8 @@ git push origin ht99a999
 - `[base: master] ← [compare: master]` の `[compare: master]` をプッシュしたブランチに変更
 
 :::
+
+<img :src="$withBase('/assets/GitHub-Flow.png')" alt="GitHub Flow">
 
 プルリクエストの作成画面では、タイトルと説明の入力欄が表示されます。
 入力欄の下には、プルリクエストに関連するコミットとマージ先との差分が表示されます。
