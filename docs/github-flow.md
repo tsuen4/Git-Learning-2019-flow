@@ -9,6 +9,7 @@ lang: ja
 今回の作業は
 
 - 既存のリポジトリのフォーク(fork)してクローン(clone)
+- 元のリポジトリと接続 (upstream というリモート先)
 - 編集用にブランチを作って作業
 - ブランチをプッシュ(push)
 - プルリクエスト(Pull Request)の作成
@@ -60,7 +61,7 @@ git remote -v # リモート先の確認 origin と upstream が表示されて�
 ::: tip 間違えてしまった場合
 
 - リモート先の URL を間違えてしまった場合
-  - `git remote set-url リモート名 元のリポジトリのURL`
+  - `git remote set-url リモート名 リポジトリのURL`
 - リモート先の名前を変えたい場合
   - `git remote rename 元のリモート名 新しいリモート名`
 
@@ -108,16 +109,19 @@ git push origin ht99a999
 
 <img :src="$withBase('/assets/GitHub-Flow.png')" alt="GitHub Flow">
 
-プルリクエストは、助言が欲しい時や、ブランチをマージしても良いと思ったときに立てます。
-立てるにはブランチをプッシュした後に GitHub で、
+プルリクエストは、助言が欲しい時や、ブランチをマージしても良いと思ったときに作成します。
+作成するには、
 
-- フォーク元のリポジトリか自分のリポジトリを参照
+- 作業したブランチをプッシュ
+- GitHub でフォーク元のリポジトリか自分のリポジトリを参照
 - 黄色い枠の「Your recently pushed branches （最近プッシュされたブランチ）」があることを確認
-- 右側の `[Compare & pull request]` を選択して `プルリクエスト(pull request)` を作成
+- 右側の `[Compare & pull request]` を選択
 
-を行います。
+を行い、`プルリクエスト(pull request)` を作成できます。
 
 ::: tip [Compare & pull request] が表示されていない場合
+
+作業したブランチをプッシュしてから一定時間経過すると表示されない場合があります。
 
 - ファイル一覧の上にある [New pull request] を選択
 - `[base: master] ← [compare: master]` の `[compare: master]` をプッシュしたブランチに変更
