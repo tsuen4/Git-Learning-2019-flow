@@ -39,7 +39,7 @@ Git には`コンフリクト(conflict)`という状態があります。
 衝突した変更に対して、Git ではどちらを保持するかの判断ができないので、
 ユーザーに選択をしてもらうことになります。
 
-<img :src="$withBase('/assets/conflict.png')" alt="GitHub Flow">
+<img :src="$withBase('/assets/conflict.png')" alt="conflict">
 
 
 マージした時にコンフリクトすると、以下のように出力されます。
