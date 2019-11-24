@@ -70,10 +70,10 @@ git remote -v # リモート先の確認 origin と upstream が表示されて�
 HTTPS の URL を使用している場合は `git remote -v` コマンドで、以下のような出力になります。
 
 ```git
-origin  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (fetch)
-origin  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (push)
-upstream  https://github.com/自分のアカウント名/To-do-List.git (fetch)
-upstream  https://github.com/自分のアカウント名/To-do-List.git (push)
+origin  https://github.com/自分のアカウント名/To-do-List.git (fetch)
+origin  https://github.com/自分のアカウント名/To-do-List.git (push)
+upstream  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (fetch)
+upstream  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (push)
 ```
 
 ## ブランチを作って作業
