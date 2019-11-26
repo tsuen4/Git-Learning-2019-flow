@@ -23,3 +23,5 @@ lang: ja
 → `C:\Users\ログインしているユーザー名` ）
 
 :::
+
+この教材は [Git-it](https://github.com/jlord/git-it-electron) を参考にして制作しました。
