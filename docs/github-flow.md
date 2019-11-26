@@ -100,7 +100,7 @@ checkout コマンドに -b オプションを付けた `git checkout -b ブラ�
 学籍番号のブランチに切り替えたら、リポジトリ <https://github.com/oecu-class-advanced-cpp2/To-do-List> の
 
 - [README.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/README.md)
-- [document.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/document.md)
+- [exercise.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/exercise.md)
 
 に書いてある方法で作業を始めましょう。
 
