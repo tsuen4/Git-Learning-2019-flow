@@ -2,7 +2,7 @@
 lang: ja
 ---
 
-# GitHub Flow を用いて既存のプロジェクトに参加してみよう
+# GitHub Flow を用いて既存のプロジェクトに参加してみよう (1/2)
 
 実際に GitHub Flow を用いて、既存のプロジェクトに変更を加えてみましょう。この演習は「フォークとプルモデル」をベースに構成されています。最終的な全体像は以下のようになります。
 
@@ -12,7 +12,8 @@ lang: ja
 
 - 既存のリポジトリのフォークしてクローン
 - 元のリポジトリと接続
-- 編集用にブランチを作って作業
+- 編集用にブランチを作る
+- 演習課題
 - ブランチをプッシュ
 - プルリクエストの作成
 
@@ -94,60 +95,3 @@ git checkout ht99a999 # 作成したブランチに切り替える
 ::: tip ブランチの作成 + 切替のショートカット
 checkout コマンドに -b オプションを付けた `git checkout -b ブランチ名` で、作成と切り替えを同時に行うことができます。
 :::
-
-## ワーク
-
-学籍番号のブランチに切り替えたら、リポジトリ <https://github.com/oecu-class-advanced-cpp2/To-do-List> の
-
-- [README.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/README.md)
-- [exercise.md](https://github.com/oecu-class-advanced-cpp2/To-do-List/blob/master/exercise.md)
-
-に書いてある方法で作業を始めましょう。
-
-## ブランチをプッシュ
-
-**作成・編集したファイルをコミット**して、定期的にリモートリポジトリにブランチをプッシュしておきましょう。
-
-```bash
-# origin というリモート先に学籍番号の名前のブランチを送信
-git push origin ht99a999
-```
-
-::: tip ブランチ名を入力するのが面倒な場合
-`git push origin HEAD` とすることで、**現在いるブランチ**をプッシュできます。
-:::
-
-## プルリクエストの作成
-
-<img :src="$withBase('/assets/pull_request.png')" alt="Pull reques">
-
-プルリクエストは、助言が欲しい時や、ブランチをマージしても良いと思ったときに作成します。
-作成するには、
-
-- 作業したブランチをプッシュ
-- GitHub でフォーク元のリポジトリか自分のリポジトリを参照
-- 黄色い枠の「Your recently pushed branches （最近プッシュされたブランチ）」があることを確認
-- 右側の `[Compare & pull request]` を選択
-
-を行い、`プルリクエスト(pull request)` を作成できます。
-
-::: tip [Compare & pull request] が表示されていない場合
-
-作業したブランチをプッシュしてから一定時間経過すると表示されない場合があります。
-
-- ファイル一覧の上にある [New pull request] を選択
-- `[base: master] ← [compare: master]` の `[compare: master]` をプッシュしたブランチに変更
-
-:::
-
-<img :src="$withBase('/assets/GitHub-Flow.png')" alt="GitHub Flow">
-
-プルリクエストの作成画面では、タイトルと説明の入力欄が表示されます。
-入力欄の下には、プルリクエストに関連するコミットとマージ先との差分が表示されます。
-
-元リポジトリのオーナーにプル（確認）してもらうために、変更内容を記入しましょう。
-入力したら `[Create pull request]` で作成します。
-オーナーがレビューして何も問題がなければマージされ、問題があればプルリクエストのページでやり取りが行われます。
-マージされたら、あなたの変更が元のプロジェクトに反映されます！
-
-**演習課題はこれで終了です。お疲れさまでした。**

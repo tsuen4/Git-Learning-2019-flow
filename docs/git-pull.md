@@ -41,7 +41,6 @@ Git には`コンフリクト(conflict)`という状態があります。
 
 <img :src="$withBase('/assets/conflict.png')" alt="conflict">
 
-
 マージした時にコンフリクトすると、以下のように出力されます。
 ここでは、README.md がコンフリクトを起こしている状態となります。
 

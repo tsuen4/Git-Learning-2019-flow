@@ -9,8 +9,9 @@ lang: ja
 
 - [GitHub を用いた共同開発](joint-development.html)
   - プルリクエストを用いた共同開発について
-- [**GitHub Flow を用いて既存のプロジェクトに参加してみよう**](github-flow.html)
-  - 本教材での演習課題
+- [GitHub Flow を用いて既存のプロジェクトに参加してみよう (1/2)](github-flow-1.html)
+- [演習課題](exercise.html)
+- [GitHub Flow を用いて既存のプロジェクトに参加してみよう (2/2)](github-flow-2.html)
 - [リモート先の変更をローカルに反映](git-pull.html)
   - GitHub を扱う際に覚えるべき内容
 

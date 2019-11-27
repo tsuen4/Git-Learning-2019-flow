@@ -12,7 +12,9 @@ module.exports = {
   themeConfig: {
     sidebar: [
       '/joint-development',
-      '/github-flow',
+      '/github-flow-1',
+      '/exercise',
+      '/github-flow-2',
       '/git-pull',
     ],
     displayAllHeaders: true,
