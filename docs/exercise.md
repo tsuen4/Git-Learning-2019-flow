@@ -60,19 +60,19 @@
 追加されたら、項目の左側にチェックを入れて [Delete selected items] を押してみましょう。
 現時点では削除されないことが確認できます。
 これは、 deleteSelected() が呼び出されていないからです。
-index.html にあるボタンから呼び出す処理を追加しましましょう。
+index.html にある `<input type="button" value="Delete selected items" onclick="" />` の onclick="" の中に、`deleteSelected()` を追加しましょう。
 修正が終わったら、コミットしましょう。
 
 ### 大見出しを中央揃えにする
 
 ![notcentering](https://i.imgur.com/neh9qyk.png)
 
-大見出し (h1) が左側に寄っているので、 style.css で中央揃えにしましょう。
+大見出し (h1) が左側に寄っているので、中央揃えにしましょう。style.css の `h1 { }` の中に、 `text-align: center;` を追加しましょう。
 修正が終わったら、コミットしましょう。
 
 ### body に対して Google Fonts を導入する
 
 ![not Google Fonts](https://i.imgur.com/prNsBov.png)
 
-デフォルトのフォントだとありきたりなので、変化を加えるために、Google Fonts から好きな日本語フォントを導入しましょう。
+デフォルトのフォントだとありきたりなので、変化を加えるために、[Google Fonts](https://fonts.google.com/) から好きな日本語フォントを導入しましょう。Google Fonts から Noto Sans JP を導入する場合は、 style.css の上部に `@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');` を追加し、 `body { }` の中に `font-family: 'Noto Sans JP', sans-serif;` を追加します。
 導入が終わったら、コミットしましょう。
