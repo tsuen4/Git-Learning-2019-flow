@@ -2,7 +2,7 @@
 lang: ja
 ---
 
-# OECU-Git-Learning: GitHub Flow
+# Git-Learning: GitHub Flow
 
 この教材では GitHub を用いた共同開発について扱っています。
 この教材の目的は、 GitHub Flow を用いて既存のリポジトリに変更を加えられるようにすることです。
