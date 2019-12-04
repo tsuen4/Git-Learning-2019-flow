@@ -1,3 +1,7 @@
+---
+lang: ja
+---
+
 # 演習課題
 
 [リポジトリ](https://github.com/oecu-class-advanced-cpp2/To-do-List)の template/ ディレクトリにある To-do List にはいくつかの問題点があります。それを修正しましょう。
