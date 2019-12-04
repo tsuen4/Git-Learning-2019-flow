@@ -27,11 +27,10 @@ GitHub 上にあるリポジトリをローカルにダウンロードするに�
 
 <img :src="$withBase('/assets/fork_clone.png')" alt="fork and clone">
 
-今回使用するリモートリポジトリは <https://github.com/oecu-class-advanced-cpp2/To-do-List> です。
+今回使用するリモートリポジトリは <https://github.com/tsuen4/To-do-List> です。
 リンク先のリポジトリにアクセスして、
 
 - 右上の fork ボタンを押してフォーク
-- フォーク先を自分のアカウントに
   - フォークが完了してページ遷移後の URL に自分のアカウント名が含まれているか確認
 - フォークされたら、画面の右中央にある `[Clone or download]` からリポジトリの URL をコピー
 - `git clone <URL>` コマンドでローカルにクローン
@@ -78,17 +77,17 @@ HTTPS の URL を使用している場合は `git remote -v` コマンドで、�
 ```git
 origin  https://github.com/自分のアカウント名/To-do-List.git (fetch)
 origin  https://github.com/自分のアカウント名/To-do-List.git (push)
-upstream  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (fetch)
-upstream  https://github.com/oecu-class-advanced-cpp2/To-do-List.git (push)
+upstream  https://github.com/tsuen4/To-do-List.git (fetch)
+upstream  https://github.com/tsuen4/To-do-List.git (push)
 ```
 
 ## ブランチ作成
 
-upstream の設定ができたらブランチを作成します。今回は学籍番号でつけてみましょう。
+upstream の設定ができたらブランチを作成します。今回は GitHub のユーザー名でつけましょう。
 
 ```bash
-git branch ht99a999 # 学籍番号の名前でブランチを作成
-git checkout ht99a999 # 作成したブランチに切り替える
+git branch ユーザー名 # ユーザー名でブランチを作成
+git checkout ユーザー名 # 作成したブランチに切り替える
 # 'git status' で現在のブランチの確認
 ```
 
