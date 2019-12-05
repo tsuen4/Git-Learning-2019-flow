@@ -2,7 +2,8 @@ module.exports = {
   base: '/flow/',
   title: 'Git-Learning: GitHub Flow',
   head: [
-    // ['link', { rel: 'icon', href: '' }]
+    // <meta name="robots" content="noindex">
+    ['meta', { name: 'robots', content: 'noindex' }]
   ],
   markdown: {
     config: (md) => {
