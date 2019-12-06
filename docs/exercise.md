@@ -17,14 +17,14 @@ lang: ja
 - 「[修正内容](#%e4%bf%ae%e6%ad%a3%e5%86%85%e5%ae%b9)」を見て作業
 - ブランチをプッシュしてプルリクエストを作成
 
-### 修正後のリポジトリの構成例(ユーザー名が _example の場合)
+### 修正後のリポジトリの構成例(ユーザー名が example の場合)
 
 ```bash
 .
 ├── README.md
 ├── exercise.md
 ├── submit
-│   └── _example
+│   └── example
 │       ├── index.html
 │       ├── main.js
 │       ├── ress.css
